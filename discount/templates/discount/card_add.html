@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    {{ form.id }}
+    {{ form.status }}
+    {{ form.seria }}
+    {{ form.date_created }}
+    {{ form.expire_date }}
+    <button>SEND</button>
+</form>
+</body>
+</html>

@@ -29,14 +29,6 @@
                 <div class="col-md-12 text-right navicon">
                 </div>
             </div>
-            <form action="{% url 'search' %}" method="get" class="d-flex editContent">{% csrf_token %}
-                <div>
-                    <input type="search" id="Search" name="q"
-                           placeholder="Search"
-                           aria-label="Search through site content">
-                    <button>Search</button>
-                </div>
-            </form>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center inner">
                     <h1 class="animated fadeInDown">HALCYON<span>DAYS</span></h1>
@@ -47,7 +39,7 @@
         </div>
     </section>
 </header>
-
+{% block content %}{% endblock %}
 <footer>
     <div class="container">
         <div class="row">

@@ -5,7 +5,7 @@ from .models import *
 
 @admin.register(Card)
 class CardAdmin(admin.ModelAdmin):
-    list_filter = ['status', 'seria', 'id']
+    list_filter = ['status', 'series', 'id']
     date_hierarchy = 'date_created'
     search_fields = ['id']
 

@@ -1,13 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>
-        {{ card.card_series }}
-        {{ card.card_number }}
-    </title>
-</head>
-<body>
+{% extends 'discount/base.html' %}
+{% load static %}
 
+{% block title %}
+Card list page
+{% endblock %}
+{% block content %}
+<body>
+<form method="get">
+    {{ form }}
+    {% csrf_token %}
+    <button>SEARCH</button>
+</form>
+{% for card in cards %}
+<a href="{{ card.get_absolute_url }}">{{ card.number }}</a>
+{{ card.status }}
+{{ card.seria }}
+{{ card.date_created }}
+{{ card.expire_date }}
+<br>
+{% endfor %}
+<a href="{% url 'discount_card_add' %}">ADD</a>
 </body>
-</html>
+{% endblock %}
