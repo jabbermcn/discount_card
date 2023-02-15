@@ -1,18 +1,17 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% extends 'discount/base.html' %}
+{% load static %}
+{% block title %}
+Card detail page
+{% endblock %}
+{% block content %}
 <body>
-{{ card.id }}
+{{ card.number }}
 {{ card.status }}
-{{ card.seria }}
+{{ card.series }}
 {{ card.date_created }}
 {{ card.expire_date }}<br>
 {% for order in orders %}
 {{ order.id }}
 {% endfor %}
 </body>
-</html>
+{% endblock %}

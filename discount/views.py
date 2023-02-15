@@ -55,10 +55,10 @@ class CardListView(ListView):
 
 class CardDetailView(DetailView):
     model = Card
-    pk_url_kwarg = 'card_id'
+    pk_url_kwarg = 'card_number'
     context_object_name = 'card'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['orders'] = Order.objects.filter(card__id=context.get('card').id)
+        context['orders'] = Order.objects.filter(card__number=context.get('card').number)
         return context

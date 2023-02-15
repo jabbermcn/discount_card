@@ -12,9 +12,9 @@ Card list page
     <button>SEARCH</button>
 </form>
 {% for card in cards %}
-<a href="{{ card.get_absolute_url }}">{{ card.number }}</a>
+<a href="{{ card.get_absolute_url }}">{{ card.card_number }}</a>
 {{ card.status }}
-{{ card.seria }}
+{{ card.series }}
 {{ card.date_created }}
 {{ card.expire_date }}
 <br>

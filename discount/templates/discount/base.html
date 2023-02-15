@@ -22,12 +22,13 @@
 </head>
 <body id="top">
 <header id="home">
-
     <section class="hero" id="hero">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-right navicon">
+                    <a href="{% url 'discount_card_list' %}" class="nav-item nav-link">CARD LIST</a>
                 </div>
+                {% block content %}{% endblock %}
             </div>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center inner">
@@ -39,7 +40,6 @@
         </div>
     </section>
 </header>
-{% block content %}{% endblock %}
 <footer>
     <div class="container">
         <div class="row">

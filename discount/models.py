@@ -86,7 +86,7 @@ class Card(models.Model):
         return reverse('discount_card_detail', kwargs={'card_number': self.card_number})
 
     def __str__(self):
-        return self.card_number
+        return str(self.card_number)
 
     class Meta:
         verbose_name = 'card'

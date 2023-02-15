@@ -6,7 +6,7 @@ from .models import *
 class CardCreateForm(ModelForm):
     class Meta:
         model = Card
-        fields = ['id', 'status', 'series', 'date_created', 'expire_date']
+        fields = ['card_number', 'status', 'series', 'date_created', 'expire_date']
 
 
 def get_status_choices():
@@ -15,8 +15,8 @@ def get_status_choices():
 
 
 def get_series_choices():
-    statuses = CardSeries.objects.filter()
-    return [[0, '...']] + [[status.id, status.name] for status in statuses]
+    series = CardSeries.objects.filter()
+    return [[0, '...']] + [[series.id, series.name] for series in series]
 
 
 class CardFilter(Form):
