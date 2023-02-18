@@ -5,13 +5,13 @@ Card detail page
 {% endblock %}
 {% block content %}
 <body>
-{{ card.number }}
+{{ card.card_number }}
 {{ card.status }}
 {{ card.series }}
 {{ card.date_created }}
 {{ card.expire_date }}<br>
 {% for order in orders %}
-{{ order.id }}
+<a>ID заказа - {{ order.id }}</a>
 {% endfor %}
 </body>
 {% endblock %}

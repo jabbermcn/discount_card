@@ -83,7 +83,7 @@ class Card(models.Model):
     )
 
     def get_absolute_url(self):
-        return reverse('discount_card_detail', kwargs={'card_number': self.card_number})
+        return reverse('discount_card_detail', kwargs={'card_id': self.id})
 
     def __str__(self):
         return str(self.card_number)
