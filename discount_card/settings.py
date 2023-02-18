@@ -35,6 +35,7 @@ INSTALLED_APPS += [
     'rest_framework',
     'corsheaders',
     'discount.apps.DiscountConfig',
+    'api.apps.ApiConfig',
 ]
 
 # after apps
